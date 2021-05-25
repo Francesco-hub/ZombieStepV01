@@ -12,5 +12,7 @@ interface IUserDao {
 
     fun updateUser(user: BEUser)
 
+    fun getUserById(id: Int) : BEUser
+
     fun restartDb()
 }

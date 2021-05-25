@@ -31,7 +31,7 @@
 
     <TextView
         android:id="@+id/stepcoins"
-        android:layout_width="230dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"

@@ -145,6 +145,19 @@ class UserDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_NAME,
 
     }
 
+    override fun getUserById(id: Int) : BEUser {
+        var retrievedUser = BEUser(0,"1","aa","aa", 3,2,1.0,2,3,1,null)
+        val db = this.readableDatabase
+        var cursor = db.query("$DATABASE_NAME", arrayOf("id","name","email","password","stepCoins","totalSteps","multiplier","fortressLvl","wallLvl","weaponsLvl","picture"),"id LIKE '%$id%'",null,null,null,"id")
+        var result = getByCursor(cursor)
+        if (result.isNotEmpty()) {
+            return result[0]
+        }
+        else {
+            return retrievedUser
+        }
+    }
+
     override fun restartDb() {
         val db = this.writableDatabase
         db!!.execSQL("DELETE FROM $DATABASE_NAME WHERE 1=1")

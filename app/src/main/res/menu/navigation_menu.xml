@@ -10,7 +10,6 @@
         android:id="@+id/activity_store"
         android:enabled="true"
         android:title="Store" />
-    <item android:title="Report" />
     <item android:title="Profile" />
     <item
         android:enabled="false"

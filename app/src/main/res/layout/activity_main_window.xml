@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    android:id="@+id/drawerLayout"
+    tools:context=".Activities.MainWindow">
+
+    <include
+        layout="@layout/content_main"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="#222222">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_menu_24" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="800dp"
+            android:layout_height="800dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/hazard" />
+
+        <TextView
+            android:id="@+id/txt_welcome"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:text="Welcome back "
+            android:textColor="@color/Hazard_yellow"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.077" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_startWalking"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="32dp"
+            android:backgroundTint="@color/Hazard_yellow"
+            android:fontFamily="@font/acme"
+            android:shadowColor="@color/design_default_color_error"
+            android:text="Start Walking"
+            android:textColor="@color/btn_Text"
+            android:textColorHighlight="@color/design_default_color_error"
+            android:textColorHint="@color/design_default_color_error"
+            android:textColorLink="@color/design_default_color_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.901"
+            app:rippleColor="@android:color/holo_green_light"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_viewBase"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/Hazard_yellow"
+            android:fontFamily="@font/acme"
+            android:shadowColor="@color/design_default_color_error"
+            android:text="View Base"
+            android:textColor="@color/btn_Text"
+            android:textColorHighlight="@color/design_default_color_error"
+            android:textColorHint="@color/design_default_color_error"
+            android:textColorLink="@color/design_default_color_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.739"
+            app:layout_constraintStart_toEndOf="@+id/btn_startWalking"
+            app:layout_constraintTop_toBottomOf="@+id/txt_welcome"
+            app:layout_constraintVertical_bias="0.882"
+            app:rippleColor="@android:color/holo_green_light"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/lbl_base"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:text="Base Level: "
+            android:textColor="@color/toxic"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.26" />
+
+        <TextView
+            android:id="@+id/lbl_wall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:text="Wall Level:"
+            android:textColor="@color/toxic"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_base"
+            app:layout_constraintVertical_bias="0.17000002" />
+
+        <TextView
+            android:id="@+id/lbl_weapons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:text="Weapons Level:"
+            android:textColor="@color/toxic"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.204"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_wall"
+            app:layout_constraintVertical_bias="0.244" />
+
+        <TextView
+            android:id="@+id/txt_lvlBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/akronim2"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:text="0"
+            android:textColor="@color/Hazard_yellow"
+            android:textSize="90sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintStart_toEndOf="@+id/lbl_base"
+            app:layout_constraintTop_toBottomOf="@+id/txt_welcome" />
+
+        <TextView
+            android:id="@+id/txt_lvlWall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/akronim2"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:text="0"
+            android:textColor="@color/Hazard_yellow"
+            android:textSize="90sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.224"
+            app:layout_constraintStart_toEndOf="@+id/lbl_wall"
+            app:layout_constraintTop_toBottomOf="@+id/txt_lvlBase" />
+
+        <TextView
+            android:id="@+id/txt_lvlWeapons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akronim2"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:text="0"
+            android:textColor="@color/Hazard_yellow"
+            android:textSize="90sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_viewBase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toEndOf="@+id/lbl_weapons"
+            app:layout_constraintTop_toBottomOf="@+id/txt_lvlWall"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header"
+        app:menu="@menu/navigation_menu">
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

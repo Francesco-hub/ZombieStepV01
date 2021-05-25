@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:actionLayout="@layout/activity_main_window"
+        android:id="@+id/main_window"
+        android:title="Home" />
+    <item
+        android:actionLayout="@layout/activity_store"
+        android:id="@+id/activity_store"
+        android:enabled="true"
+        android:title="Store" />
+    <item android:title="Report" />
+    <item android:title="Profile" />
+    <item
+        android:enabled="false"
+        android:title=""></item>
+    <item
+        android:enabled="false"
+        android:title=""></item>
+    <item
+        android:enabled="false"
+        android:title=""></item>
+    <item android:title="Log Out" />
+
+</menu>

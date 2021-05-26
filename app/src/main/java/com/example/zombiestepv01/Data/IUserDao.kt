@@ -1,5 +1,6 @@
 package com.example.zombiestepv01.Data
 
+import com.example.zombiestepv01.Model.BEItem
 import com.example.zombiestepv01.Model.BEUser
 
 interface IUserDao {
@@ -15,4 +16,5 @@ interface IUserDao {
     fun getUserById(id: Int) : BEUser
 
     fun restartDb()
+
 }

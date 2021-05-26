@@ -16,16 +16,19 @@
         android:background="#222222">
 
         <ListView
+            android:id="@+id/lst_storeItems"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="270dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.073" />
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -49,6 +52,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/hazard" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_buy"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="128dp"
+            android:backgroundTint="@color/Hazard_yellow"
+            android:fontFamily="@font/acme"
+            android:shadowColor="@color/design_default_color_error"
+            android:text="Buy Item"
+            android:textColor="@color/btn_Text"
+            android:textColorHighlight="@color/design_default_color_error"
+            android:textColorHint="@color/design_default_color_error"
+            android:textColorLink="@color/design_default_color_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lst_storeItems"
+            app:layout_constraintVertical_bias="0.869"
+            app:rippleColor="@android:color/holo_green_light"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

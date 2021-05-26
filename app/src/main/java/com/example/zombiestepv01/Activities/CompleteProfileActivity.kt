@@ -5,7 +5,9 @@ import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.view.isVisible
+import com.example.zombiestepv01.Data.IStoreDao
 import com.example.zombiestepv01.Data.IUserDao
+import com.example.zombiestepv01.Data.StoreDao_Impl
 import com.example.zombiestepv01.Data.UserDao_Impl
 import com.example.zombiestepv01.Model.BEUser
 import com.example.zombiestepv01.R
@@ -15,6 +17,7 @@ import java.io.File
 class CompleteProfileActivity : AppCompatActivity() {
 
     private lateinit var userRepo: IUserDao
+    private lateinit var storeRepo: IStoreDao
     private lateinit var user : BEUser
     private var userPicture: File? = null
     private val REQUEST_CODE = 1
@@ -23,6 +26,7 @@ class CompleteProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_complete_profile)
         userRepo = UserDao_Impl(this)
+        storeRepo = StoreDao_Impl(this)
         txt_errorPicture.isVisible = false
         var extras: Bundle = intent.extras!!
         user = extras.getSerializable("loggedUser") as BEUser
@@ -40,6 +44,7 @@ class CompleteProfileActivity : AppCompatActivity() {
             user.name = fld_name.text.toString()
             user.Picture = userPicture
             userRepo.updateUser(user)
+            storeRepo.initializeStore(user.id)
             val intent = Intent(this, MainWindow::class.java)
             intent.putExtra("loggedUser", user)
             startActivity(intent)

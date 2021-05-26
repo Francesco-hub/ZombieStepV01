@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.core.view.isVisible
+import com.example.zombiestepv01.Data.IStoreDao
 import com.example.zombiestepv01.Data.IUserDao
+import com.example.zombiestepv01.Data.StoreDao_Impl
 import com.example.zombiestepv01.Data.UserDao_Impl
 import com.example.zombiestepv01.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,12 +17,15 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var userRepo: IUserDao
+    private lateinit var storeRepo: IStoreDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         userRepo = UserDao_Impl(this)
+        storeRepo = StoreDao_Impl(this)
         userRepo.restartDb()
+        storeRepo.restartDb()
         txt_noUserFound.isVisible = false
         btn_attemptLogIn.setOnClickListener{ v -> attemptLogin()}
         btn_ActivitySignUp.setOnClickListener{ v -> openSignUpActivity()}

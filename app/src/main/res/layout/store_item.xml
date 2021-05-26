@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnr_layout"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/img_itemPicture"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_itemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NAME"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_itemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PHONE"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_itemDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insert an item description here" />
+    </LinearLayout>
+
+</LinearLayout>

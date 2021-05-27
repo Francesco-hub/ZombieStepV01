@@ -6,36 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".Activities.CameraActivity">
 
-    <com.google.android.material.button.MaterialButton
-
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/hazard"
-        android:backgroundTint="@color/Hazard_yellow"
-        android:elevation="2dp"
-        android:scaleType="fitCenter"
-        android:text="@string/take_photo"
-        app:backgroundTint="@color/background1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-
     <ImageButton
         android:id="@+id/camera_capture_button"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="100dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/hazard"
+        android:backgroundTint="@color/Hazard_yellow"
+        android:backgroundTintMode="multiply"
         android:elevation="2dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewFinder"
-        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
-        app:layout_constraintStart_toStartOf="@+id/viewFinder"
-        app:layout_constraintTop_toTopOf="@+id/viewFinder"
-        app:srcCompat="@drawable/hazard" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/black"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take picture"
+            android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"
+            android:gravity="center"
+            android:shadowColor="@color/texts"
+            android:shadowDx="20"
+            android:shadowDy="20"
+            android:shadowRadius="10"
+            android:textColor="@color/toxic"
+            android:textSize="36sp"/>
+    </RelativeLayout>
 
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.camera.view.PreviewView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

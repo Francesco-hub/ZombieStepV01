@@ -167,7 +167,6 @@
             android:id="@+id/txt_lvlBase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:fontFamily="@font/akronim2"
             android:gravity="center"
             android:shadowColor="@color/texts"
@@ -177,16 +176,17 @@
             android:text="0"
             android:textColor="@color/Hazard_yellow"
             android:textSize="90sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.224"
             app:layout_constraintStart_toEndOf="@+id/lbl_base"
-            app:layout_constraintTop_toBottomOf="@+id/txt_welcome" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.226" />
 
         <TextView
             android:id="@+id/txt_lvlWall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:fontFamily="@font/akronim2"
             android:gravity="center"
             android:shadowColor="@color/texts"
@@ -196,10 +196,12 @@
             android:text="0"
             android:textColor="@color/Hazard_yellow"
             android:textSize="90sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.224"
             app:layout_constraintStart_toEndOf="@+id/lbl_wall"
-            app:layout_constraintTop_toBottomOf="@+id/txt_lvlBase" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.446" />
 
         <TextView
             android:id="@+id/txt_lvlWeapons"
@@ -214,12 +216,12 @@
             android:text="0"
             android:textColor="@color/Hazard_yellow"
             android:textSize="90sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_viewBase"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.454"
             app:layout_constraintStart_toEndOf="@+id/lbl_weapons"
-            app:layout_constraintTop_toBottomOf="@+id/txt_lvlWall"
-            app:layout_constraintVertical_bias="0.26" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.654" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

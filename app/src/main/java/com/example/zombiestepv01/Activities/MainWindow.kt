@@ -3,7 +3,6 @@ package com.example.zombiestepv01.Activities
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -32,10 +31,18 @@ class MainWindow : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         btn_viewBase.setOnClickListener{v-> openViewBaseActivity()}
         var extras: Bundle = intent.extras!!
         user = extras.getSerializable("loggedUser") as BEUser
-        txt_welcome.text = "Welcome back ${user.name}"
+        txt_welcome.text = "Welcome back,  ${user.name}"
+        if(user.totalSteps==0) txt_welcome.text = "Welcome,     ${user.name}"
         txt_lvlBase.text = "${user.fortressLvl}"
+        if(user.fortressLvl==7) {
+            txt_lvlBase.text = "MAX"
+        }
         txt_lvlWall.text = "${user.wallLvl}"
+        if(user.wallLvl==7){
+            txt_lvlWall.text = "MAX"
+        }
         txt_lvlWeapons.text = "${user.weaponsLvl}"
+        if(user.weaponsLvl==7) txt_lvlWeapons.text = "MAX"
 
         var navigationView : NavigationView = findViewById(R.id.nav_menu)
         val headerView = navigationView.getHeaderView(0)
@@ -46,7 +53,11 @@ class MainWindow : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
     }
 
     private fun openViewBaseActivity() {
-
+        val intent = Intent(this, viewBaseActivity::class.java)
+        intent.putExtra("loggedUser", user)
+        startActivity(intent)
+        drawerLayout.close()
+        finish()
     }
 
     private fun openWalkActivity() {
@@ -64,6 +75,21 @@ class MainWindow : AppCompatActivity(), NavigationView.OnNavigationItemSelectedL
         R.id.activity_store -> {
             val intent = Intent(this, Store::class.java)
             intent.putExtra("loggedUser", user)
+            startActivity(intent)
+            drawerLayout.close()
+            finish()
+            true
+        }
+        R.id.activity_profile -> {
+            val intent = Intent(this, ProfileActivity::class.java)
+            intent.putExtra("loggedUser", user)
+            startActivity(intent)
+            drawerLayout.close()
+            finish()
+            true
+        }
+        R.id.activity_logIn -> {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             drawerLayout.close()
             finish()

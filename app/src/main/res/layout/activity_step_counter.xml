@@ -8,53 +8,138 @@
     tools:context=".Activities.StepCounterActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/txt_stepcoinCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/akronim2"
+        android:gravity="center"
+        android:shadowColor="@color/texts"
+        android:shadowDx="20"
+        android:shadowDy="20"
+        android:shadowRadius="10"
+        android:textColor="@color/Hazard_yellow"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.751"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:text="0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"
+        android:gravity="center"
+        android:shadowColor="@color/texts"
+        android:shadowDx="20"
+        android:shadowDy="20"
+        android:shadowRadius="10"
+        android:text="StepCoins"
+        android:textColor="@color/Hazard_yellow"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_starTime" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/zstep" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="800dp"
+        android:layout_height="800dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/app_name"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:alpha="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hazard" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/start"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <TextView
-        android:id="@+id/tv_start_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_start"
-        tools:text="@string/start_time" />
-
-    <TextView
-        android:id="@+id/tv_step_count"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="35sp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/Hazard_yellow"
+        android:fontFamily="@font/acme"
+        android:shadowColor="@color/design_default_color_error"
+        android:text="Start"
+        android:textColor="@color/btn_Text"
+        android:textColorHighlight="@color/design_default_color_error"
+        android:textColorHint="@color/design_default_color_error"
+        android:textColorLink="@color/design_default_color_error"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_start_time"
+        app:rippleColor="@android:color/holo_green_light"
+        app:strokeColor="@color/black"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/txt_starTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/acme"
+        android:text="E-mail"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:text="@string/start_time" />
+
+    <TextView
+        android:id="@+id/txt_stepCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/akronim2"
+        android:gravity="center"
+        android:shadowColor="@color/texts"
+        android:shadowDx="20"
+        android:shadowDy="20"
+        android:shadowRadius="10"
+        android:textColor="@color/Hazard_yellow"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         tools:text="0" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/alegreya_sans_sc_extrabold_italic"
+        android:gravity="center"
+        android:shadowColor="@color/texts"
+        android:shadowDx="20"
+        android:shadowDy="20"
+        android:shadowRadius="10"
+        android:text="Steps"
+        android:textColor="@color/Hazard_yellow"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_starTime" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

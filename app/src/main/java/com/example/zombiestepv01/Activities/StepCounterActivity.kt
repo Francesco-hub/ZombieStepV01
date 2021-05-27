@@ -19,7 +19,6 @@ import com.example.zombiestepv01.stepCounter.AppUtils
 import com.example.zombiestepv01.stepCounter.MainViewModel
 import com.example.zombiestepv01.stepCounter.SharedPreferencesManager
 import kotlinx.android.synthetic.main.activity_step_counter.*
-import kotlinx.android.synthetic.main.content_main.*
 import java.util.*
 
 
@@ -100,16 +99,20 @@ class StepCounterActivity : AppCompatActivity(), SensorEventListener {
                 stepCounter = event.values[0].toInt() - counterSteps
             }
         }
-        tv_step_count.text = "$stepCounter"
+        txt_stepCount.text = "$stepCounter"
+        var generatedStepcoins = (stepCounter * user.multiplier).toInt()
+        txt_stepcoinCount.text = "$generatedStepcoins"
     }
 
     private fun initUI() {
         startDate?.let {
-            tv_start_time.text = getString(R.string.start_time, AppUtils.getFormattedDate(it))
+            txt_starTime.text = getString(R.string.start_time, AppUtils.getFormattedDate(it))
         } ?: run {
-            tv_start_time.text = getString(R.string.start_time, "-")
+            txt_starTime.text = getString(R.string.start_time, "-")
         }
-        tv_step_count.text = "$stepCounter"
+        txt_stepCount.text = "$stepCounter"
+        var generatedStepcoins = (stepCounter * user.multiplier).toInt()
+        txt_stepcoinCount.text = "$generatedStepcoins"
 
         if (this.isStarted) {
             btn_start.text = getString(R.string.stop)
@@ -144,6 +147,10 @@ class StepCounterActivity : AppCompatActivity(), SensorEventListener {
 
     }
 
+    override fun onBackPressed() {
+
+    }
+
     private fun startCounter() {
         isStarted = true
         this.stepCounter = 0
@@ -155,7 +162,7 @@ class StepCounterActivity : AppCompatActivity(), SensorEventListener {
 
         startDate = Date()
         startDate?.let {
-            tv_start_time.text =
+            txt_starTime.text =
                     getString(R.string.start_time, AppUtils.getFormattedDate(it))
             SharedPreferencesManager.instance.saveStartDate(it)
         }

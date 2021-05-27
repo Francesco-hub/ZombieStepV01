@@ -27,7 +27,7 @@ class StoreDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_STOR
         val db = this.writableDatabase
         val cv = ContentValues()
         cv.put("userId", "$userId")
-        cv.put("itemName","Gun")
+        cv.put("itemName","Axe")
         cv.put("itemPrice",1000)
         cv.put("itemDescription","Increases your weapons level")
         cv.put("itemLevel",1)
@@ -36,7 +36,7 @@ class StoreDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_STOR
 
         val cv2 = ContentValues()
         cv2.put("userId", "$userId")
-        cv2.put("itemName","Wall Reinforcement")
+        cv2.put("itemName","Wood Wall Reinforcement")
         cv2.put("itemPrice",1000)
         cv2.put("itemDescription","Increases your wall level")
         cv2.put("itemLevel",1)
@@ -45,7 +45,7 @@ class StoreDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_STOR
 
         val cv3 = ContentValues()
         cv3.put("userId", "$userId")
-        cv3.put("itemName","Survivor")
+        cv3.put("itemName","Rick")
         cv3.put("itemPrice",1000)
         cv3.put("itemDescription","Increases your multiplier by 0.25")
         cv3.put("itemLevel",1)

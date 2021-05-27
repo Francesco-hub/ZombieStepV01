@@ -39,48 +39,6 @@ class UserDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_USER,
         else {
             return retrievedUser
         }
-        /*var retrievedUser = BEUser(0,"1","aa","aa", 3,2,1.0,2,3,1,null)
-        var sqlEmail = "'$InputEmail'"
-        var sqlPassword = "'$InputPassword'"
-        val query = "SELECT * FROM $DATABASE_NAME WHERE email = $sqlEmail AND password = $sqlPassword"
-        val db = this.readableDatabase
-        var cursor: Cursor? = null
-        try {
-            cursor = db.rawQuery(query, null)
-        } catch (e: SQLiteException) {
-            db.execSQL(query)
-            return retrievedUser
-        }
-        var id: Int
-        var name: String
-        var email: String
-        var password: String
-        var stepCoins: Int
-        var totalSteps: Int
-        var multiplier: Double
-        var fortressLvl: Int
-        var wallLvl: Int
-        var weaponsLvl: Int
-        var picture: String
-        if (cursor.moveToFirst()) {
-            do {
-                id = cursor.getInt(cursor.getColumnIndex("id"))
-                name = cursor.getString(cursor.getColumnIndex("name"))
-                email = cursor.getString(cursor.getColumnIndex("email"))
-                password = cursor.getString(cursor.getColumnIndex("password"))
-                stepCoins = cursor.getInt(cursor.getColumnIndex("stepCoins"))
-                totalSteps = cursor.getInt(cursor.getColumnIndex("totalSteps"))
-                multiplier = cursor.getDouble(cursor.getColumnIndex("multiplier"))
-                fortressLvl = cursor.getInt(cursor.getColumnIndex("fortressLvl"))
-                wallLvl = cursor.getInt(cursor.getColumnIndex("wallLvl"))
-                weaponsLvl = cursor.getInt(cursor.getColumnIndex("weaponsLvl"))
-                picture = cursor.getString(cursor.getColumnIndex("picture"))
-
-                retrievedUser = BEUser(id,name,email,password,stepCoins,totalSteps,multiplier,fortressLvl,wallLvl ,weaponsLvl,File(picture))
-
-            } while (cursor.moveToNext())
-        }
-        */
     }
 
     override fun checkIfUserExists(email: String): Boolean {
@@ -173,12 +131,12 @@ class UserDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_USER,
         cv.put("name", "Bruce")
         cv.put("email","w@.")
         cv.put("password",1)
-        cv.put("stepCoins",100000)
-        cv.put("totalSteps",0)
+        cv.put("stepCoins",10000000)
+        cv.put("totalSteps",5733)
         cv.put("multiplier",1.0)
         cv.put("fortressLvl",1)
-        cv.put("wallLvl",1)
-        cv.put("weaponsLvl",1)
+        cv.put("wallLvl",0)
+        cv.put("weaponsLvl",0)
         cv.put("picture", R.drawable.hazard.toString())
         val result = db.insert("$DATABASE_USER", null, cv)
 

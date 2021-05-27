@@ -59,6 +59,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onBackPressed() {
+
+    }
+
     private fun validateData(): Boolean {
         var dataValidated = true
         var validatedEmail = true

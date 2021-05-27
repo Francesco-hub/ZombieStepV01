@@ -43,6 +43,7 @@ class CompleteProfileActivity : AppCompatActivity() {
         if(validateData()){
             user.name = fld_name.text.toString()
             user.Picture = userPicture
+            user.stepCoins = 100000000
             userRepo.updateUser(user)
             storeRepo.initializeStore(user.id)
             val intent = Intent(this, MainWindow::class.java)

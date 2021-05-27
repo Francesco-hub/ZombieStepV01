@@ -6,21 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".Activities.CameraActivity">
 
-    <Button
-        android:id="@+id/camera_capture_button"
+    <com.google.android.material.button.MaterialButton
+
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="50dp"
+        android:background="@drawable/hazard"
+        android:backgroundTint="@color/Hazard_yellow"
         android:elevation="2dp"
         android:scaleType="fitCenter"
         android:text="@string/take_photo"
+        app:backgroundTint="@color/background1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
+    <ImageButton
+        android:id="@+id/camera_capture_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewFinder"
+        app:layout_constraintEnd_toEndOf="@+id/viewFinder"
+        app:layout_constraintStart_toStartOf="@+id/viewFinder"
+        app:layout_constraintTop_toTopOf="@+id/viewFinder"
+        app:srcCompat="@drawable/hazard" />
+
     <androidx.camera.view.PreviewView
         android:id="@+id/viewFinder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

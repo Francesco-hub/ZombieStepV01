@@ -99,7 +99,6 @@ class StoreDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_STOR
             val db = this.writableDatabase
             db!!.execSQL("DELETE FROM ${StoreDao_Impl.DATABASE_STORE} WHERE 1=1")
             initializeStore(1)
-            initializeStore(2)
         }
 
     override fun updateStore(item: BEItem) {

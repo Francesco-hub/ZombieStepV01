@@ -129,31 +129,16 @@ class UserDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_USER,
     private fun insertMocks(db: SQLiteDatabase) {
         val cv = ContentValues()
         cv.put("name", "Bruce")
-        cv.put("email","w@.")
-        cv.put("password",1)
+        cv.put("email","wayne@batman.com")
+        cv.put("password",1234)
         cv.put("stepCoins",10000000)
         cv.put("totalSteps",5733)
         cv.put("multiplier",1.0)
-        cv.put("fortressLvl",1)
+        cv.put("fortressLvl",0)
         cv.put("wallLvl",0)
         cv.put("weaponsLvl",0)
         cv.put("picture", R.drawable.hazard.toString())
         val result = db.insert("$DATABASE_USER", null, cv)
-
-        val cv2 = ContentValues()
-        var nullpicture : File?
-        nullpicture = null
-        cv2.put("name", "")
-        cv2.put("email","r@.")
-        cv2.put("password",1)
-        cv2.put("stepCoins",1000)
-        cv2.put("totalSteps",0)
-        cv2.put("multiplier",1.0)
-        cv2.put("fortressLvl",1)
-        cv2.put("wallLvl",1)
-        cv2.put("weaponsLvl",1)
-        cv2.put("picture",nullpicture.toString())
-        val result2 = db.insert("$DATABASE_USER", null, cv2)
     }
 
 }

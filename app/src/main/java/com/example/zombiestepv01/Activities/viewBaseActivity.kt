@@ -51,7 +51,8 @@ class viewBaseActivity : AppCompatActivity() {
     }
 
     private fun showRelevantPictures() {
-        if(user.fortressLvl==1) img_base.setImageResource(R.drawable.bs1)
+        if(user.fortressLvl==0) img_base.setImageResource(R.drawable.bs0)
+        else if(user.fortressLvl==1) img_base.setImageResource(R.drawable.bs1)
         else if(user.fortressLvl==2) img_base.setImageResource(R.drawable.bs2)
         else if(user.fortressLvl==3) img_base.setImageResource(R.drawable.bs3)
         else if(user.fortressLvl==4) img_base.setImageResource(R.drawable.bs4)

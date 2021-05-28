@@ -148,7 +148,10 @@ class StepCounterActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onBackPressed() {
-
+        val intent = Intent(this, MainWindow::class.java)
+        intent.putExtra("loggedUser", user)
+        startActivity(intent)
+        finish()
     }
 
     private fun startCounter() {

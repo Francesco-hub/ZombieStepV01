@@ -28,7 +28,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun attemptSignUp() {
         if(validateData()){
-            var newUser = BEUser(0,"",fld_email.text.toString(),fld_password.text.toString(), 0,0,1.0,1,0,0,null)
+            var newUser = BEUser(0,"",fld_email.text.toString(),fld_password.text.toString(), 0,0,1.0,0,0,0,null)
             if(!userAlreadyExists()) {
                 userRepo.createNewUser(newUser)
                 var loggedUser = userRepo.login(fld_email.text.toString(),fld_password.text.toString())

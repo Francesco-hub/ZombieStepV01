@@ -2,26 +2,22 @@ package com.example.zombiestepv01.Activities
 
 import android.content.Intent
 import android.graphics.drawable.Drawable
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.zombiestepv01.Data.IUserDao
 import com.example.zombiestepv01.Data.UserDao_Impl
 import com.example.zombiestepv01.Model.BEUser
 import com.example.zombiestepv01.R
 import com.google.android.material.navigation.NavigationView
-import kotlinx.android.synthetic.main.activity_complete_profile.*
-import kotlinx.android.synthetic.main.activity_main_window.*
-import kotlinx.android.synthetic.main.activity_main_window.*
-import kotlinx.android.synthetic.main.activity_store.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_store.drawerLayout
 import kotlinx.android.synthetic.main.activity_store.imageButton
-import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.io.File
-import kotlinx.android.synthetic.main.activity_main_window.drawerLayout as drawerLayout1
 
 class ProfileActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var user : BEUser
@@ -50,10 +46,19 @@ class ProfileActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
         txt_pTotalSteps.text = "Total Steps:    " + user.totalSteps
         var km = 0.0
         km = (user.totalSteps/1400).toDouble()
+        btn_shareSteps.setOnClickListener{v -> onClickShare()}
         txt_pKm.text = "Total Distance:    $km  Km"
         btn_pPicture.setImageDrawable(Drawable.createFromPath(user.Picture?.absolutePath))
         btn_pPicture.setOnClickListener { v -> openCamera() }
         userRepo = UserDao_Impl(this)
+    }
+
+    private fun onClickShare() {
+        val sms_uri = Uri.parse("smsto:")
+        val sms_intent = Intent(Intent.ACTION_SENDTO, sms_uri)
+        //val intent = Intent(Intent.ACTION_VIEW)
+        sms_intent.putExtra("sms_body", "Hey, I have already made ${user.totalSteps} steps in ZombieStep, and my fortress is already at level ${user.fortressLvl}. What about you? Are you ready for the apocalypse?")
+        startActivity(sms_intent)
     }
 
     private fun openCamera() {

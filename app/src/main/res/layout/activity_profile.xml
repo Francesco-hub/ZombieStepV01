@@ -54,10 +54,10 @@
             android:textSize="48sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499" />
+            app:layout_constraintVertical_bias="0.437" />
 
         <TextView
             android:id="@+id/txt_pTotalSteps"
@@ -74,10 +74,10 @@
             android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.147"
+            app:layout_constraintHorizontal_bias="0.148"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.625" />
+            app:layout_constraintVertical_bias="0.556" />
 
         <TextView
             android:id="@+id/txt_pKm"
@@ -97,7 +97,7 @@
             app:layout_constraintHorizontal_bias="0.127"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_pTotalSteps"
-            app:layout_constraintVertical_bias="0.189" />
+            app:layout_constraintVertical_bias="0.111" />
 
         <TextView
             android:id="@+id/txt_pMultiplier"
@@ -114,10 +114,10 @@
             android:textSize="36sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.142"
+            app:layout_constraintHorizontal_bias="0.144"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_pKm"
-            app:layout_constraintVertical_bias="0.284" />
+            app:layout_constraintVertical_bias="0.16" />
 
         <ImageButton
             android:id="@+id/btn_pPicture"
@@ -125,10 +125,34 @@
             android:layout_height="236dp"
             app:layout_constraintBottom_toTopOf="@+id/txt_pName"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.664"
+            app:layout_constraintVertical_bias="0.738"
             tools:srcCompat="@tools:sample/avatars" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_shareSteps"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="@color/Hazard_yellow"
+            android:fontFamily="@font/acme"
+            android:shadowColor="@color/design_default_color_error"
+            android:text="Share"
+            android:textColor="@color/btn_Text"
+            android:textColorHighlight="@color/design_default_color_error"
+            android:textColorHint="@color/design_default_color_error"
+            android:textColorLink="@color/design_default_color_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_pMultiplier"
+            app:layout_constraintVertical_bias="0.493"
+            app:rippleColor="@android:color/holo_green_light"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

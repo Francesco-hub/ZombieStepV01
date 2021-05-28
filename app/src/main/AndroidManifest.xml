@@ -23,21 +23,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ZombieStepV01"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.viewBaseActivity"></activity>
+        <activity android:name=".Activities.viewBaseActivity"
+            android:theme="@style/Theme.DrawerMenu.NoActionBar" ></activity>
         <activity
             android:name=".Activities.ProfileActivity"
-            android:theme="@style/Theme.DrawerMenu.NoActionBar" />
-        <activity android:name=".Activities.StepCounterActivity" />
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.StepCounterActivity"
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activities.Store"
-            android:theme="@style/Theme.DrawerMenu.NoActionBar" />
-        <activity android:name=".Activities.CameraActivity" />
-        <activity android:name=".Activities.CompleteProfileActivity" />
-        <activity android:name=".Activities.SignUpActivity" />
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.CameraActivity"
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.CompleteProfileActivity"
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.SignUpActivity"
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activities.MainWindow"
-            android:theme="@style/Theme.DrawerMenu.NoActionBar" />
-        <activity android:name=".Activities.MainActivity">
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Activities.MainActivity"
+            android:theme="@style/Theme.DrawerMenu.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

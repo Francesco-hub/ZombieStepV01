@@ -132,7 +132,7 @@ class UserDao_Impl (context: Context) : SQLiteOpenHelper(context, DATABASE_USER,
         cv.put("email","wayne@batman.com")
         cv.put("password",1234)
         cv.put("stepCoins",10000000)
-        cv.put("totalSteps",5733)
+        cv.put("totalSteps",1939)
         cv.put("multiplier",1.0)
         cv.put("fortressLvl",0)
         cv.put("wallLvl",0)

@@ -29,8 +29,6 @@ class MainActivity : AppCompatActivity() {
         txt_noUserFound.isVisible = false
         btn_attemptLogIn.setOnClickListener{ v -> attemptLogin()}
         btn_ActivitySignUp.setOnClickListener{ v -> openSignUpActivity()}
-        fld_email.setText("W@.")
-        fld_password.setText("1")
         //fld_email.setOnClickListener{v -> txt_noUserFound.isVisible = false}
         //fld_password.setOnClickListener{v -> txt_noUserFound.isVisible = false}
     }
